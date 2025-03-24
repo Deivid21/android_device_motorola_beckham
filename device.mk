@@ -57,11 +57,6 @@ PRODUCT_PACKAGES += \
 # Dex-pre-opt exclusions
 $(call add-product-dex-preopt-module-config,MotoSignatureApp,disable)
 
-# GMS
-ifeq ($(WITH_GMS),true)
-GMS_MAKEFILE=gms_minimal.mk
-endif
-
 # Init
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/etc/init.sys.beckham.rc:$(TARGET_COPY_OUT_SYSTEM)/etc/init/init.sys.beckham.rc
