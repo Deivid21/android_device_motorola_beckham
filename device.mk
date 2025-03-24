@@ -74,6 +74,12 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/whitelist_modservice.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/whitelist_modservice.xml
 
+# Moto Camera 2
+TARGET_MOTCAMERA2 := primary
+TARGET_USES_MOTCAMERA2 := true
+ 
+$(call inherit-product, vendor/motorola/MotCamera2/motcamera2.mk)
+
 # Motorola Health
 PRODUCT_PACKAGES += \
     motorola.hardware.health@1.0.vendor
